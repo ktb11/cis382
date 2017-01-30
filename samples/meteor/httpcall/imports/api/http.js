@@ -13,7 +13,7 @@ if (Meteor.isServer) {
             
             try {
                 try {
-                  let callResult = HTTP.call('GET', url, {});
+                  let callResult = Meteor.http.call('GET', url, {});
                   statusCode = callResult.statusCode;
                   result = JSON.stringify(callResult);
                 } catch (callErr) {
