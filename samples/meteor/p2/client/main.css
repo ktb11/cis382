@@ -1,0 +1,80 @@
+body {
+    font-family: Verdana, Arial, sans-serif;
+    margin-left: 10px;
+    background-color: #315481;
+    background-image: linear-gradient(to bottom, #315481, #918e82 100%);
+    background-attachment: fixed;
+}
+header {
+    width: 350px;
+    text-align: center;
+    color: #fcfbf9;
+    line-height: 80%;
+    margin-top: 20px;
+}
+header #title {
+    font-size: 30pt;
+    text-shadow: 3px 3px #918e82;
+}
+header #credit {
+    width: 350px;
+    text-align: center;
+	color: #fcfbf9;
+	font-size: 6pt;
+	font-style: italic;
+}
+header a {
+	color: #fcfbf9;
+}
+main #tagline {
+    width: 350px;
+    text-align: center;
+    color: #fcfbf9;
+    text-shadow: 1px 1px #918e82;
+	font-size: 10pt;
+	line-height: 300%;
+}
+form .leftColumn { 
+	display: block;
+	float: left; 
+	width: 150px; 
+	text-align: right; 
+	color: #fcfbf9;
+    text-shadow: 1px 1px #918e82;
+	font-size: 10pt;
+	padding: 0; 
+  	margin-right: 3px;
+}
+form label {
+	color: #fcfbf9;
+    text-shadow: 1px 1px #918e82;
+	font-size: 10pt;
+	padding: 0; 
+}
+#weatherSubmit {
+    line-height: 300%;
+	text-align: center; 
+    width: 350px;
+}
+.reactWeatherInfo {
+	color: #fcfbf9;
+    text-shadow: 1px 1px #918e82;
+	font-size: 10pt;
+	padding: 0; 
+}
+.reactWeatherInfo #tagline {
+    width: 350px;
+    text-align: center;
+	line-height: 300%;
+}
+.reactWeatherInfo label {
+	display: block;
+	float: left; 
+	width: 150px; 
+	text-align: right; 
+}
+.reactWeatherInfo data {
+	width: 200px;
+	margin-left: 10px;
+	padding: 0; 
+}
