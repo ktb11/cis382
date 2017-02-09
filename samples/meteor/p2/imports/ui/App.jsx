@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react';
 import ReactDOM from 'react-dom';
 import Weather from './Weather.jsx';
 
-const apiKey = "59eb12305383375b9e405ee74ed31c6f";
+const apiKey = "xxxxxx";
 
 // App component - represents the whole app
 export default class App extends Component {
