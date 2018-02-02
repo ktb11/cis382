@@ -1,5 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import { check } from 'meteor/check'
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export default class Typicode extends Component {
   render() {
