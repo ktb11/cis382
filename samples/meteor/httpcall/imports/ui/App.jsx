@@ -1,6 +1,5 @@
-import React, { Component, PropTypes } from 'react';
-import ReactDOM from 'react-dom';
-import Typicode from './Typicode.jsx';
+import React, { Component } from 'react';
+import Typicode from './Typicode.js';
 
 export default class App extends Component {
   constructor(props) {
