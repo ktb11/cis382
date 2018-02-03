@@ -1,5 +1,4 @@
-import { Meteor } from 'meteor/meteor';
-import { check } from 'meteor/check';
+import { HTTP } from 'meteor/http';
 
 if (Meteor.isServer) {
     Meteor.methods({
@@ -13,7 +12,7 @@ if (Meteor.isServer) {
             
             try {
                 try {
-                  let callResult = Meteor.http.call('GET', url, {});
+                  let callResult = HTTP.call('GET', url, {});
                   statusCode = callResult.statusCode;
                   result = JSON.stringify(callResult);
                 } catch (callErr) {
