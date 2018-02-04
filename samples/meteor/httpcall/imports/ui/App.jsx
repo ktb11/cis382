@@ -4,34 +4,38 @@ import Typicode from './Typicode.js';
 export default class App extends Component {
   constructor(props) {
     super(props);
-    this.state = {restData: {}};
+    this.state = {restData: []};
   }
     
   handleButtonClick(event) {
     
-    // Prevent default submit event
-    event.preventDefault();
-    
-    console.log("Button: " + event.target.id);
-    
+    // Prevent default submit event - only necessary if you are using forms
+    // event.preventDefault();
+    // console.log("Button: " + event.target.id);
     let whichData = 'users';
-    
     this.getRESTData(whichData);
     
   }
   
   getRESTData(whichData) {
-    // Call server-side method to return weather
+    // Call server-side method to return data
     // Why bind(this) below? See http://stackoverflow.com/questions/35581611/exception-in-delivering-result-of-invoking-typeerror-is-not-a-function-in-met
     // Note that setState is asynchronous, which means you should not immediately (sequentially) depend on a setState changing
     if (Meteor.isClient) {
       Meteor.call("getRestData", whichData, function(error, results) {
         try{
-          //console.log(results);
           if (error) {
+            // Note: We will not be using Meteor error parameter, so it will always be undefined
+            // See http://docs.meteor.com/api/methods.html#Meteor-Error if you want to use Meteor errors
             console.log("Error in retrieving data: " + error);
           } else {
-            this.setState({restData: JSON.parse(results)});
+            //let parsedResults = JSON.parse(results);
+            if (results.error) {
+              console.log("Error status code: " + results.error.statusCode);
+              console.log("Error: " + results.error.error);
+            } else {
+              this.setState({restData: JSON.parse(results.content)});
+            }
           }
         } catch (err) {
           console.log("Error in Meteor call: " + err);
