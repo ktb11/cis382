@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Typicode from './Typicode.js';
+import Typicode from './Typicode.jsx';
 
 export default class App extends Component {
   constructor(props) {
